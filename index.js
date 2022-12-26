@@ -24,6 +24,9 @@ app.get("/",(req,res)=>{
 
 app.get("/days", (req, res) => {
     
+     res.send("days  ");
+   
+    /*
     daySchema.find().then((response)=>{
         res.send("디비연결성공")
         //console.log(response)
@@ -32,7 +35,7 @@ app.get("/days", (req, res) => {
         res.send("디비연결실패")
         console.log(err);
     })
-    
+    */
     
 });
 
