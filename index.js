@@ -23,14 +23,13 @@ app.get("/",(req,res)=>{
 
 
 app.get("/days", (req, res) => {
-  daySchema
-    .find()
-    .then((response) => {
-      res.json(response);
+ daySchema.find().then((response)=>{
+        console.log(response)
+        res.json(response);
+    }).catch((err)=>{
+        console.log(err);
     })
-    .catch((err) => {
-      console.log(err);
-    });
+    
 });
 
 
