@@ -22,18 +22,16 @@ app.get("/",(req,res)=>{
 })
 
 
-app.get("/days", (req,res)=>{
-    res.send("/days");
-    /*
-    daySchema.find().then((response)=>{
-        //console.log(response)
-        res.json(response);
-    }).catch((err)=>{
-        console.log(err);
+app.get("/days", (req, res) => {
+  daySchema
+    .find()
+    .then((response) => {
+      res.json(response);
     })
-    */
+    .catch((err) => {
+      console.log(err);
+    });
 });
-
 
 
 app.post("/days",(req,res)=>{
