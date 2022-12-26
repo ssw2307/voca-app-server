@@ -23,12 +23,16 @@ app.get("/",(req,res)=>{
 
 
 app.get("/days", (req, res) => {
- daySchema.find().then((response)=>{
-        console.log(response)
+    
+    daySchema.find().then((response)=>{
+        res.send("디비연결성공")
+        //console.log(response)
         res.json(response);
     }).catch((err)=>{
+        res.send("디비연결실패")
         console.log(err);
     })
+    
     
 });
 
